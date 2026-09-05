@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "pipfix",
+	"version": "${version}",
+	"name": "PIP Fix",
+	"description": "Keeps browser Picture-in-Picture windows (and other always-on-top windows) visible over Minecraft's fullscreen mode on Windows, and hides the taskbar while fullscreen like a real fullscreen app would.",
+	"authors": [
+		"meltedkeyboard"
+	],
+	"contact": {
+		"homepage": "https://github.com/fssniper/fabric-pip-fix-mod",
+		"sources": "https://github.com/fssniper/fabric-pip-fix-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/pipfix/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"pipfix.client.PIPFixModClient"
+		],
+		"fabric-datagen": [
+			"pipfix.client.PIPFixModDataGenerator"
+		]
+	},
+	"mixins": [
+		{
+			"config": "pipfix.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

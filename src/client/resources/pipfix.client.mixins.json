@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "pipfix.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"WindowMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
